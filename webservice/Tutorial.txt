@@ -1,0 +1,24 @@
+CONCEPT:
+
+
+
+Jersey:
+  jersey in itself is a framework for building RESTful web services. While it serves as reference implementation
+  of the JAX-RS API, it can also be used in other modes.
+    
+
+Standalone: plain jersey API on top of java (jdk 1.6 or above). Jersey provides an API for this.
+  
+Jersey with Grizzly -- well Grizzly is another framework which can be used as an HTTP/web server using java NIO model.
+to use Jersey with Grizzly, you need to configure it accordingly. So think of Grizzly as the container of your JAX-RS(RESTful) resources and the one
+which takes care of all the HTTP plumbing for you while you work with high level abstractions of the JAX-RS API.
+  
+
+Jersey on Tomcat --- now tomcat is a servlet container. JAX-RS can easily be configured to work with plain Servlet container by just configuring 
+the web.xml of your Tomcat application.
+
+Jersey on JAVA EE container --- take the example of Glassfish which the RI for java EE platform.
+Jersey is bundled out of the box in Glassfish. 
+
+
+
