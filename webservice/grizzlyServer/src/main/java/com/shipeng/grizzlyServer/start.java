@@ -51,7 +51,7 @@ public class start {
         // the static2 folder from the jar file jersey1-grizzly2-spring-1.0-SNAPSHOT.jar
         server.getServerConfiguration().addHttpHandler(
                 new CLStaticHttpHandler(new URLClassLoader(new URL[] {
-                    new File("target/grizzlyServer-0.0.1-SNAPSHOT.jar").toURI().toURL()}), "webapp/static2/"),
+                    new File("target/grizzlyServer-0.0.1-SNAPSHOT.jar").toURI().toURL()}), "src/main/resources/webapp/static2/"),
                 "/jarstatic");
 
         try {
