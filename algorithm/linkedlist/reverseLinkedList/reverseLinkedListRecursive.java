@@ -17,10 +17,10 @@ public class reverseLinkedListRecursive {
      *
      */
 
-    ListNode remaining = reverseList(head.next);  //reverse the rest part
-    head.next.next = head;     //make the link from rest to head
+    ListNode remaining = reverseList(head.next);  //reverse the rest part , we resolved our subproblem here.
+    head.next.next = head;     //make the link from rest to head  (from remaining to head).
     head.next = null;          //break the link from head to rest
-    return remaining;         //return the new head  
+    return remaining;         //return the new head , think of remaining as if it is a single node. 
 
   }
 }
