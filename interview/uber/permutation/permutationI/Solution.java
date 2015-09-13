@@ -29,12 +29,23 @@
 
 
 
-
+import java.util.*;
 
 
 public class Solution {
 
-  public List<List<Integer>> permute(int[] nums) {
+  public static void main(String[] args) {
+    
+    List<List<Integer>> result = null;
+    int[] nums = {3,2,1,1};
+    Arrays.sort(nums);
+    result  = permute(nums);
+    
+    System.out.println(result.size());
+  }
+
+
+  public static List<List<Integer>> permute(int[] nums) {
     if (nums == null) return null;
     List<List<Integer>> result = new ArrayList<List<Integer>>();
     List<Integer> path = new ArrayList<Integer>();
@@ -42,7 +53,7 @@ public class Solution {
     return result;
   }
 
-  private void permuteHelper(List<List<Integer>>result, List<Integer>path, int[] nums) {
+  private static void permuteHelper(List<List<Integer>>result, List<Integer>path, int[] nums) {
     
     if (path.size() == nums.length) {
       result.add(new ArrayList<Integer>(path));
