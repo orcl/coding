@@ -15,13 +15,15 @@ public class Solution {
         }
 
         for (int i = 0; i < s.length(); i++) {
+            //if the whole word is in the dictionary, simply set to true and go to next one.
             if (wordDict.contains(s.substring(0,i+1))) {
                 m[i] = true;
                 continue;
             }
 
+            //linear scan and look back at all the positions.
             for (int j = 0; j < i; j++) {
-                String str = s.substring(j+1, i+1);
+                String str = s.substring(j+1, i+1); // substring from j+1 to i+1, second part.
                 if (m[j] && wordDict.contains(str)) {
                     m[i] = true;
                     break;
