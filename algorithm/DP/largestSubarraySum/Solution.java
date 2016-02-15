@@ -23,6 +23,11 @@ public class Solution {
 
         int global_max = 0;
         int[] m = new int[array.length];
+        //m[i] means the largest sum of subarray ending at index i.
+        //here ending at index i is because of the subarray has to be continuous,
+        //therefore, we can't let m[i] means from 0 to ith index largest sum, we can't guarantee contiguous subarray then.
+        //therefore, we could have from any index before ith index, to ith index, (?,i), this will guarantee continuous subarray.
+        //
         global_max = array[0];
         m[0] = array[0];
 
